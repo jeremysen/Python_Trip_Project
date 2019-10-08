@@ -7,15 +7,19 @@
 
 Group name  | Andrew ID | Email
 ------------- | ------------- | -------------
-Yuanli Gu  | Content Cell | 
-Yuou Lei  | Content Cell |
-Xinrui Zheng  | Content Cell |
+Liyuan Gu  | liyuang | 
+Yuou Lei  | yuoul |
+Xinrui Zheng  | xinruiz |
 Shanyue Wan  | shanyuew | shanyuew@andrew.cmu.edu
-Rhea-Luz Valbuena | Content Cell | 
+Rhea-Luz Valbuena |  | 
 
 ## 1. Criteria
 
-
+Library | Version 
+------------- | ------------- 
+pandas | 0.25.1
+beautifulsoup4 | 4.8.0
+selenium | 4.0.0a3
 
 ## 2. Software
 ### 2.1. Abstract
@@ -347,23 +351,18 @@ Then you can run the program and it will automatically scrape data from Trip.com
 Run the program and the names of departure airports and arrival airports will be translated into common language. Also the 'AU$' will be eliminated in the price column.
 
 ### 3.6. Weather Data
-**Flight Scraping Code**
+**Weather Scraping Code**
 
 Library | Version 
 ------------- | ------------- 
 pandas | 0.25.1
-XlsxWriter | 1.2.1
+requests | 1.2.1
 beautifulsoup4 | 4.8.0
-selenium | 4.0.0a3
 
-Before running the flight data scraping program, please follow these steps:
+**Running:**
 
-- Download and install Chrome browser 
-- Download chromedriver from https://sites.google.com/a/chromium.org/chromedriver/downloads. You must choose the chromedriver version based on your chrome browser version. 
-- Uncompress the file and paste it to Python installation directory.
+Start running the project.
 
-Then you can run the program and it will automatically scrape data from Trip.com and write it to Excel. The destinations include Sydney, Melbourne, Brisbane, Canberra and Adelaide.
+**Description:**
 
-**Data cleaning code**
-
-Run the program and the names of departure airports and arrival airports will be translated into common language. Also the 'AU$' will be eliminated in the price column.
+You’ll scrap the weather data of the 5 major cities in Australia——Canberra, Adelaide, Sydney, Melbourne and Brisbane from 2013-11 to 2018-05. The weather information including the date, the weather description about the starting of the day, the weather description about the end of the day, the highest temperature of the day, the lowest temperature of day and the wind information and so on.
