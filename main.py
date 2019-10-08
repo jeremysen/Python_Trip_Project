@@ -1,10 +1,8 @@
 #%%
-import os
 import pandas as pd
 from prettytable import PrettyTable
-os.chdir("/Users/shanyue/Github/Python_Trip_Project")
 from graph_generator import draw_hotel_price, draw_weather, draw_airline
-from NLP.nlp_analytics import get_five_top_tourism_attraction, get_word_cloud
+from nlp_analytics import get_five_top_tourism_attraction, get_word_cloud
 from map_generator import get_plan_route
 from weather_analysis import city_day_wather
 from filter_suitable_service import get_suitable_hotel, get_suitable_airline

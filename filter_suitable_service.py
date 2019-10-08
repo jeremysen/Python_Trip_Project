@@ -6,7 +6,7 @@
 
 import pandas as pd
 import os
-os.chdir("/Users/shanyue/Github/Python_Trip_Project")
+#os.chdir("/Users/shanyue/Github/Python_Trip_Project")
 
 def add_range_air(price,air_down,air_up):
     price = int(price)

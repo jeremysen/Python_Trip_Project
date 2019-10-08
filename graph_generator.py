@@ -8,7 +8,7 @@ import pandas as pd
 import datetime
 from matplotlib import pyplot as plt
 import os
-os.chdir("/Users/shanyue/Github/Python_Trip_Project")
+#os.chdir("/Users/shanyue/Github/Python_Trip_Project")
 from prettytable import PrettyTable
 
 def check_date(date, begin_date, end_date):

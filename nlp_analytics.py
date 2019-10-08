@@ -7,8 +7,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from collections import Counter
 
-os.chdir("/Users/shanyue/Github/Python_Trip_Project/")
-
 ctrip = pd.read_csv("dataset/ctrip_cleaned_data.csv")
 
 #%%

@@ -6,7 +6,7 @@
 
 import pandas as pd
 import os
-os.chdir("/Users/shanyue/Github/Python_Trip_Project/")
+#os.chdir("/Users/shanyue/Github/Python_Trip_Project/")
 import folium
 import json
 import numpy as np

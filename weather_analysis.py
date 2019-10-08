@@ -2,7 +2,7 @@ import time
 from datetime import datetime, date, time
 import pandas as pd
 import os
-os.chdir("/Users/shanyue/Github/Python_Trip_Project")
+#os.chdir("/Users/shanyue/Github/Python_Trip_Project")
 
 def city_day_wather(city,start,end):
     start = start.replace("-","")[-4:]
