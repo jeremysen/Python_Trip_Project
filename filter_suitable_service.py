@@ -15,13 +15,16 @@ def add_range_air(price,air_down,air_up):
     else:
         return 0
 
-def get_suitable_hotel(city):
+def get_suitable_hotel(city, mode):
     hotel = pd.read_csv("dataset/hotel_data.csv")
     hotel_city = hotel[(hotel["city"]==city) & (hotel["rate"] == "Excellent ")]
     if(len(hotel_city) == 0):
         hotel_city = hotel[(hotel["city"]==city) & (hotel["rate"] == "Very good ")]
-    hotel_city = hotel_city.sort_values(by="price", ascending=True)
-    return list(hotel_city.iloc[0])[2], list(hotel_city.iloc[0])[6]
+    hotel_city = hotel_city.sort_values(by="price", ascending=True).reset_index(drop=True)
+    if(mode=="Economy"):
+        return list(hotel_city.iloc[0])[2], list(hotel_city.iloc[0])[6]
+    else:
+        return list(hotel_city.iloc[60])[2], list(hotel_city.iloc[60])[6]
     
 
 def get_suitable_airline(city, air_down, air_up):
@@ -32,7 +35,7 @@ def get_suitable_airline(city, air_down, air_up):
     airline_city["price_within"] = airline_city["Price"].apply(lambda x:add_range_air(x,air_down,air_up))
     airline_city = airline_city[airline_city["price_within"] == 1]
     airline_city = airline_city.sort_values(by="Price", ascending=True).reset_index(drop=True)
-    return list(airline_city.iloc[0])[1], list(airline_city.iloc[0])[10]
+    return list(airline_city.iloc[0])[5], list(airline_city.iloc[0])[10], list(airline_city.iloc[0])
 
 
 if(__name__=="__main__"):

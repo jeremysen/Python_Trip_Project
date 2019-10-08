@@ -17,6 +17,8 @@ if(__name__ == "__main__"):
     ############################################################
     # Get input from concole
     ############################################################
+    print("Input your Travel Mode:")
+    input_mode = input()
     print("Input your destination:")
     input_des = input()
     print("Input your travel time down bound: (Format yyyy-mm-dd)")
@@ -63,12 +65,18 @@ if(__name__ == "__main__"):
 
 #%%
     place_list = []
-    airline, air_price = get_suitable_airline(input_des, input_flight_down, input_flight_up)
+    airline, air_price, airline_data = get_suitable_airline(input_des, input_flight_down, 
+                                              input_flight_up)
+    print("Airline Details")
+    print(str(airline_data[:3])[1:-1].replace("'",""))
+    print()
+    print()
     place_list.append(airline)
-    hotel, hotel_price = get_suitable_hotel(input_des)
+    hotel, hotel_price = get_suitable_hotel(input_des, input_mode)
     place_list.append(hotel)
     tourism_list = get_five_top_tourism_attraction(input_des)
     place_list.extend(tourism_list)
+    place_list.append(hotel)
     place_df = pd.DataFrame(place_list,columns=["Place"])
     map_detail["Place"] = map_detail["Place"].str.strip()
     target_spots = pd.merge(place_df,map_detail,on="Place",how="left")
@@ -83,7 +91,7 @@ if(__name__ == "__main__"):
     print()
     print()
     print("Route plans detail:")
-    for i in range(len(route_plan_list)):
+    for i in range(len(route_plan_list)-1):
         print("Step "+ str(i+1) + ": " + route_plan_list[i])
     
     ############################################################

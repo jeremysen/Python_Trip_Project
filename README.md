@@ -34,9 +34,9 @@ Rhea-Luz Valbuena | Content Cell |
 
 <img src="README_Pictures/analytic_process.png" alt="Sky Walking logo" align="center"/>
 
-## 3. Software Description
+## 3. Software Install and Running
 
-### Dependence
+### a). Dependence
 
 Library | Version 
 ------------- | ------------- 
@@ -48,8 +48,7 @@ wordcloud | 1.5.0
 prettytable | 0.7.2
 jieba | 0.39
 
-## 4. Install and Running
-### a). File Structure
+### b). File Structure
 > main.py
 > 
 > graph_generator.py
@@ -76,11 +75,11 @@ jieba | 0.39
 > > 
 > > weather_data.xlsx
 
-### b). Library Install
+### c). Library Install
 
 `pip install -r requirements.txt`
 
-### c). Running
+### d). Running
 
 Running the main modle.
 
@@ -94,15 +93,15 @@ Input Down-Bound Hotel Price: `50`
 
 Input Up-Bound Hotel Price: `500`
 
-## 5. Live Deomo
+## 4. Live Deomo
 ### a). Get Input
-<img src="README_Pictures/screenshot1.jpg" alt="Sky Walking logo" align="center" />
+<img src="README_Pictures/screenshot1.jpg" alt="Sky Walking logo" align="center"/>
 ### b). Hotel Price Pie Chart
-<img src="README_Pictures/screenshot2.jpg" alt="Sky Walking logo" align="center" />
+<img src="README_Pictures/screenshot2.jpg" alt="Sky Walking logo" align="center"/>
 ### c). Temperature Line Chart
-<img src="README_Pictures/screenshot3.jpg" alt="Sky Walking logo" align="center" />
+<img src="README_Pictures/screenshot3.jpg" alt="Sky Walking logo" align="center"/>
 ### d). Airline Price Pie Chart
-<img src="README_Pictures/screenshot4.jpg" alt="Sky Walking logo" align="center" />
+<img src="README_Pictures/screenshot4.jpg" alt="Sky Walking logo" align="center"/>
 ### e). Map Visualization
 <img src="README_Pictures/map.jpg" alt="Sky Walking logo" align="center" />
 ### f). Plan Steps
@@ -113,7 +112,7 @@ Input Up-Bound Hotel Price: `500`
 <img src="README_Pictures/screenshot7.jpg" alt="Sky Walking logo" align="center" />
 
 
-## 6. Scrape
+## 5. Scrape
 ### Ctrip Comments Scrape
 ### Hotel Data
 ### Airline Data

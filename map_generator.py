@@ -68,6 +68,8 @@ def get_plan_route(place_list):
 
     # Save the map
     city_map.save("map/map.html")
+    
+    
     return target_label, final_distance
     
 #%%
