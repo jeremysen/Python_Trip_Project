@@ -1,14 +1,21 @@
 # -*- coding: utf-8 -*-
 
-############################################################
-# Based on the scraped hotel/airline data to get a suitable item for customer
-############################################################ 
+'''
+@Description: This file is used to generate suitable service for customer
+@Author:      Shanyue
+@Time:        2019-10-02
+'''
 
 import pandas as pd
-import os
-#os.chdir("/Users/shanyue/Github/Python_Trip_Project")
 
 def add_range_air(price,air_down,air_up):
+    '''
+    Add range for air line
+    :param price: price in df
+    :param air_down: air_down
+    :param air_up: air_up
+    :return: whether in range
+    '''
     price = int(price)
     if(price<=(int)(air_up) and price>=(int)(air_down)):
         return 1
@@ -16,6 +23,12 @@ def add_range_air(price,air_down,air_up):
         return 0
 
 def get_suitable_hotel(city, mode):
+    '''
+    Get suitable hotel based on mode
+    :param city: city
+    :param mode: mode of customer
+    :return: hotel series
+    '''
     hotel = pd.read_csv("dataset/hotel_data.csv")
     hotel_city = hotel[(hotel["city"]==city) & (hotel["rate"] == "Excellent ")]
     if(len(hotel_city) == 0):
@@ -28,6 +41,13 @@ def get_suitable_hotel(city, mode):
     
 
 def get_suitable_airline(city, air_down, air_up):
+    '''
+    Get suitable airline
+    :param city: city
+    :param air_down: air_down
+    :param air_up: air_up
+    :return: airline series
+    '''
     airline = pd.read_excel("dataset/airline_data.xlsx")
     airline_city = airline[(airline["ArrivalAirport"].str.contains(city))]
     airline_city = airline_city[~airline_city["Price"].isna()]
