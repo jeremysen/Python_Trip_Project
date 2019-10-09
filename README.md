@@ -7,19 +7,94 @@
 
 Group name  | Andrew ID | Email
 ------------- | ------------- | -------------
-Liyuan Gu  | liyuang | 
-Yuou Lei  | yuoul |
-Xinrui Zheng  | xinruiz |
+Liyuan Gu  | liyuang | liyuang@andrew.cmu.edu
+Yuou Lei  | yuoul |yuoul@andrew.cmu.edu
+Xinrui Zheng  | xinruiz |xinruiz@andrew.cmu.edu
 Shanyue Wan  | shanyuew | shanyuew@andrew.cmu.edu
-Rhea-Luz Valbuena |  | 
+Rhea-Luz Valbuena | rvalbuen | rvalbuen@andrew.cmu.edu
 
-## 1. Criteria
+## 1. Criteria Examples
 
-Library | Version 
-------------- | ------------- 
-pandas | 0.25.1
-beautifulsoup4 | 4.8.0
-selenium | 4.0.0a3
+### 1.1. Overall Complexity and Scope of Project 
+We integrate multiple datasources, including geography data, social media comments, weather website, hotel data in our project. Based on our project, we provide a clear and comprehensive traveling recommendation for Chinese travellers.
+### 1.2. Source code comments
+Each file has been documented with comments.
+### 1.3. What needed to be run,and in what order
+Please follow the instructions below.
+### 1.4. Descriptive statistics, tabular visualization, cross tabular visualization, and graphical visualization to achieve the scope of your project
+Multiple visualization: weather, hotel, airline, map route recommendation and word cloud. We combined geography data with other scraped data to provide a personalized traveling plan. Also, we have completed data analysis on comments frequency and generate respective word clouds, cost and traveling distance analysis. 
+### 1.5 Python Language Basics
+Different python basics have been used in the files: modulation, main, etc.
+### 1.6 Built-in Data Structures, Functions, and Files
+Data Structures like, list, dict have been used in the files:
+
+**list** --main.py
+
+```python
+place_list.append(airline)
+hotel, hotel_price = get_suitable_hotel(input_des, input_mode)
+place_list.append(hotel)
+tourism_list = get_five_top_tourism_attraction(input_des)
+place_list.extend(tourism_list)
+place_list.append(hotel)
+```
+
+**dict** --ctrip_comment.py
+
+
+```python
+city_dict = {}
+city_list = father_page.find_all("div", {"class":"list_mod1"})
+for city in city_list:
+    city_name=city.find("dl").find("dt").text
+    city_detail = {}
+    place_list=[]
+    url_list=[]
+    for a in city.find("dd").find_all("a"):
+        if(not a.attrs["href"].startswith("http") and ("sight" in a.attrs["href"] \
+                                                       and (not "sightlist" in a.attrs["href"]))):
+            place_list.append(a.text)
+            url_list.append(ctrip_url+a.attrs["href"])
+    city_detail["place"]=place_list
+    city_detail["url"]=url_list
+    city_dict[city_name]=city_detail
+```
+
+### 1.7 Data Loading, Web Scraping, Storage, and File Formats
+During the scrape part, we use selelium, beautiful modules to scrape data from different websites. Aditionally, in the ctrip scrape part, we simulate the browser behavior of the views and simulate the clicking behavior to gain more comment data.
+
+### 1.8 NumPy
+Numpy is used combined with pandas to do data analysis. Following is one example:
+
+**nlp_analysis.py**
+
+```python
+def get_five_top_tourism_attraction(city):
+    city = translate(city)
+    city_df = ctrip[ctrip["city"]==city]
+    city_df = city_df.groupby("place")
+    city_df = city_df.aggregate(np.mean)
+    city_df = city_df.sort_values(by="rating", ascending=False)
+    return list(city_df.index)
+```
+
+### 1.9 Pandas
+Either in software part or in the scrape part, we use dataframe to process and store data. Also, we use several dataframe advanced techniques, like apply to make our analysis more efficient.
+
+```python
+def add_range_hotel(price,hotel_down,hotel_up):
+    price = int(price)
+    if(price<=(int)(hotel_up) and price>=(int)(hotel_down)):
+        return 1
+    else:
+        return 0
+
+hotel_data["price_within"] = hotel_data["price"].apply(lambda x:add_range_hotel(x,hotel_down,hotel_up))
+```
+
+### 1.10 Plotting & Visualization: Join, Combine, Reshape
+We combine data from weather, geography, hotel and tourism attractions to give integrated route plans. Map could be viewed in map folder.
+
 
 ## 2. Software
 ### 2.1. Abstract
@@ -101,7 +176,7 @@ Input Up-Bound Flight Price: `1000`
 ### a). Get Input
 <img src="README_Pictures/screenshot1.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
 
-At the beginning, to get personalized services, customers should input their preferences. Based on the preference, our program can then give the services, travelling route they want.
+At the beginning, to get personalized services, customers should input their preferences. Based on the preference, our program can then give the services, traveling route they want.
 <br />
 <br />
 <br />
@@ -250,7 +325,7 @@ Library | Version
 ------------- | ------------- 
 pandas | 0.25.1
 beautifulsoup4 | 4.8.0
-selenium | 4.0.0a3
+selenium | 4.0.03
 
 **Running**  
 Run `ctrip_comment.py` to scrap the hotel information in Ctrip websites. After the sunning of this file, you will get the final raw comment data.
