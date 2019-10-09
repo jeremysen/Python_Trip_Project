@@ -1,4 +1,10 @@
 #%%
+'''
+@Description: This file is the entrance of the projects
+@Author:      Shanyue
+@Time:        2019-10-01
+'''
+
 import pandas as pd
 from prettytable import PrettyTable
 from graph_generator import draw_hotel_price, draw_weather, draw_airline
@@ -62,9 +68,12 @@ if(__name__ == "__main__"):
     draw_airline(input_flight_down, input_flight_up, input_des)
 
 #%%
+    # filter suitable airline service for customer
     place_list = []
     airline, air_price, airline_data = get_suitable_airline(input_des, input_flight_down, 
                                               input_flight_up)
+
+    # display  airline service details
     print("Airline Details")
     print(str(airline_data[:3])[1:-1].replace("'",""))
     print()
@@ -72,11 +81,15 @@ if(__name__ == "__main__"):
     place_list.append(airline)
     hotel, hotel_price = get_suitable_hotel(input_des, input_mode)
     place_list.append(hotel)
+
+    # get the top five places to visit based on comments
     tourism_list = get_five_top_tourism_attraction(input_des)
     place_list.extend(tourism_list)
     place_list.append(hotel)
     place_df = pd.DataFrame(place_list,columns=["Place"])
     map_detail["Place"] = map_detail["Place"].str.strip()
+
+    # merge spots with geography data
     target_spots = pd.merge(place_df,map_detail,on="Place",how="left")
     target_spots = target_spots[~target_spots["Latitude"].isna()]
     
@@ -116,4 +129,3 @@ if(__name__ == "__main__"):
     for spot in tourism_list:
         print(spot)
         get_word_cloud(spot)
-        

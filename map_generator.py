@@ -1,12 +1,11 @@
 #%%
 
-############################################################
-# This module is to generate map of the plan
-############################################################ 
-
+'''
+@Description: This file is used to generate route map
+@Author:      Shanyue
+@Time:        2019-09-30
+'''
 import pandas as pd
-import os
-#os.chdir("/Users/shanyue/Github/Python_Trip_Project/")
 import folium
 import json
 import numpy as np
@@ -26,9 +25,20 @@ for line_dt in load_dict['features']:
     bus_longitudes.append(line_dt['geometry']['coordinates'][0])
 
 def cal_distance(position_1, position_2):
+    '''
+    Calculate distance based on lag abd lng
+    :param position_1: position1
+    :param position_2: position2
+    :return: distance between two spots
+    '''
     return np.sqrt(np.sum(np.square(np.array(position_1) - np.array(position_2))))/180*math.pi*6300000
 
 def set_bus(target_position):
+    '''
+    Set bus for the target spot
+    :param target_position:target spot
+    :return:bus id
+    '''
     distance = cal_distance(target_position, 
                                 [bus_latitudes[0],bus_longitudes[0]])
     bus_stop = 0
@@ -41,6 +51,11 @@ def set_bus(target_position):
     return distance, bus_stop
 
 def get_plan_route(place_list):
+    '''
+    Plan route for the customer
+    :param place_list: places to go
+    :return:null
+    '''
     target_lat = []
     target_lng = []
     target_label = []

@@ -1,8 +1,10 @@
 #%%
 
-############################################################
-# This module is to generate maps of the hotel price/airline/weather
-############################################################ 
+'''
+@Description: This file is used to generate graphs for the project
+@Author:      Shanyue
+@Time:        2019-10-02
+'''
 
 import pandas as pd
 import datetime
@@ -12,6 +14,13 @@ import os
 from prettytable import PrettyTable
 
 def check_date(date, begin_date, end_date):
+    '''
+    Check data weather in the range
+    :param date: date in df
+    :param begin_date: begin date
+    :param end_date: end date
+    :return: 1: in range; 0: out range
+    '''
     weather_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     begin_date = datetime.datetime.strptime(begin_date, '%Y-%m-%d')
     end_date = datetime.datetime.strptime(end_date, '%Y-%m-%d')
@@ -21,6 +30,11 @@ def check_date(date, begin_date, end_date):
         return 0
 
 def add_price_range(price):
+    '''
+    Add price range for the hotel
+    :param price:price of hotel
+    :return:price range
+    '''
     price=int(price)
     if(price<=100):
         return 0
@@ -34,6 +48,11 @@ def add_price_range(price):
         return 4
 
 def add_price_range_air(price):
+    '''
+    Add range for the airline price range
+    :param price:price of the air
+    :return:price range
+    '''
     price=int(price)
     if(price<=500):
         return 0
@@ -47,6 +66,13 @@ def add_price_range_air(price):
         return 4
 
 def add_range_hotel(price,hotel_down,hotel_up):
+    '''
+    Check price whether in the range for the hotel
+    :param price: price of the df
+    :param hotel_down: down price
+    :param hotel_up: up price
+    :return: within price
+    '''
     price = int(price)
     if(price<=(int)(hotel_up) and price>=(int)(hotel_down)):
         return 1
@@ -54,6 +80,13 @@ def add_range_hotel(price,hotel_down,hotel_up):
         return 0
 
 def add_range_air(price,air_down,air_up):
+    '''
+    Add range for the airline price
+    :param price:price in the df
+    :param air_down:down air price
+    :param air_up:up air price
+    :return:whether in range
+    '''
     price = int(price)
     if(price<=(int)(air_up) and price>=(int)(air_down)):
         return 1
@@ -61,6 +94,13 @@ def add_range_air(price,air_down,air_up):
         return 0
 
 def draw_weather(begin_date, end_date, city_name):
+    '''
+    Draw weather chat
+    :param begin_date:begin_date
+    :param end_date:end_date
+    :param city_name:city_name
+    :return:null
+    '''
     weather_data = pd.read_excel("dataset/weather_data.xlsx",sheet_name=city_name)
     weather_data["date"] = weather_data["date"].str.replace("年","-")
     weather_data["date"] = weather_data["date"].str.replace("月","-")
@@ -77,6 +117,13 @@ def draw_weather(begin_date, end_date, city_name):
     plt.show()
 
 def draw_airline(air_down,air_up, city_name):
+    '''
+    Draw airline chat
+    :param air_down:air_down
+    :param air_up:air_up
+    :param city_name:city_name
+    :return:null
+    '''
     airline = pd.read_excel("dataset/airline_data.xlsx")
     airline_city = airline[(airline["ArrivalAirport"].str.contains(city_name))]
     airline_city = airline_city[~airline_city["Price"].isna()]
@@ -97,6 +144,13 @@ def draw_airline(air_down,air_up, city_name):
     
 
 def draw_hotel_price(hotel_down,hotel_up,city_name):
+    '''
+    Draw hotel price chat
+    :param hotel_down:hotel_down
+    :param hotel_up:hotel_up
+    :param city_name:city_name
+    :return:null
+    '''
     hotel_data = pd.read_csv("dataset/hotel_data.csv")
     hotel_data = hotel_data[hotel_data["city"] == city_name]
     hotel_data = hotel_data[~hotel_data["price"].isna()]

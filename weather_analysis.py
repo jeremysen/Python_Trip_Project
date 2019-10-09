@@ -1,10 +1,20 @@
-import time
-from datetime import datetime, date, time
+'''
+@Description: This file is used to generate specific data for weather
+@Author:      Xinrui
+@Time:        2019-10-02
+'''
+
 import pandas as pd
-import os
-#os.chdir("/Users/shanyue/Github/Python_Trip_Project")
+
 
 def city_day_wather(city,start,end):
+    '''
+    Return specific weather data for the costomer
+    :param city:city
+    :param start:start time
+    :param end:end time
+    :return:specific weather data
+    '''
     start = start.replace("-","")[-4:]
     end = end.replace("-","")[-4:]
     City = pd.read_excel('dataset/weather_data.xlsx', sheet_name=city)

@@ -1,4 +1,11 @@
 #%%
+
+'''
+@Description: This file is to provide nlp analysis for the main module
+@Author:      Yuou
+@Time:        2019-10-01
+'''
+
 import jieba
 import pandas as pd
 import os
@@ -10,6 +17,7 @@ from collections import Counter
 ctrip = pd.read_csv("dataset/ctrip_cleaned_data.csv")
 
 #%%
+# get all the spots of the city
 ctrip_spot = []
 ctrip_MEL = ctrip[ctrip["city"]=="墨尔本"].place.tolist()
 ctrip_SD = ctrip[ctrip["city"]=="悉尼"].place.tolist()
@@ -26,6 +34,10 @@ ctrip_spot.append(ctrip_KA)
 
 #%%
 def cleanse_text(value):
+    """
+    :param value: Time need to be cleaned
+    :return: clean text
+    """
     import re
     if value:
         text = "".join(re.findall(r"[\u4e00-\u9fff]+", value))
@@ -34,6 +46,10 @@ def cleanse_text(value):
         return None
 
 def translate(city):
+    '''
+    :param city: city name
+    :return: Chinese city name
+    '''
     if(city=="Adelaide"):
         return "阿德莱德"
     if(city=="Sydney"):
@@ -47,6 +63,10 @@ def translate(city):
 
 #%%
 def get_word_cloud(spot):
+    '''
+    :param spot: spot name
+    :return: null
+    '''
     ctrip_temp = ctrip.loc[ctrip.place == spot]
 
     ctrip_temp["clean"] = ctrip_temp.comments.apply(lambda t: cleanse_text(t))
@@ -77,6 +97,11 @@ def get_word_cloud(spot):
 
 #%%
 def get_five_top_tourism_attraction(city):
+    '''
+    Get the top five tourism places which have highest score
+    :param city:
+    :return:
+    '''
     city = translate(city)
     city_df = ctrip[ctrip["city"]==city]
     city_df = city_df.groupby("place")
@@ -86,7 +111,3 @@ def get_five_top_tourism_attraction(city):
 
 if __name__ == '__main__':
     five_place_list = get_five_top_tourism_attraction("阿德莱德")
-# =============================================================================
-#     for place in five_place_list:
-#         get_word_cloud(place)
-# =============================================================================
