@@ -3,6 +3,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Marxh/Python_Trip_Project.svg?style=for-the-badge&label=Stars&logo=github)](https://github.com/Marxh/Python_Trip_Project)
 
+[Video Link](https://youtu.be/wnKs2_idjAo)
+
 ## 0. Group Members
 
 Group name  | Andrew ID | Email
@@ -174,123 +176,43 @@ Input Up-Bound Flight Price: `1000`
 
 ### 2.6. Live Deomo
 ### a). Get Input
-<img src="README_Pictures/screenshot1.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/screenshot1.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 At the beginning, to get personalized services, customers should input their preferences. Based on the preference, our program can then give the services, traveling route they want.
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
 ### b). Hotel Price Pie Chart
-<img src="README_Pictures/screenshot2.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/screenshot2.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 Based on the output of the price range of the customer, our program displays the hotel information as a pie chart. Customers can know what percentage of the price range takes in the selected city.
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 ### c). Temperature Line Chart
-<img src="README_Pictures/screenshot3.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/screenshot3.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 Our program will display the weather changes in the selected city. Detailed and past year's temperature will be displayed.
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 ### d). Airline Price Pie Chart
-<img src="README_Pictures/screenshot4.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/screenshot4.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 Airline information will be displayed as pie chart. 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 ### e). Map Visualization
-<img src="README_Pictures/map.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/map.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 In the `map/map.html`, a route map will be displayed to guide the customers where to go and how to play in selected city. 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 ### f). Plan Steps
-<img src="README_Pictures/screenshot5.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/screenshot5.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 A more specific route plan will be displayed below.
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-### g). Cost and Distance Steps
-<img src="README_Pictures/screenshot6.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
 
+### g). Cost and Distance Steps
+<img src="README_Pictures/screenshot6.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
+65%
 Costs and diatance information about the route are displayed as table.
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
 ### h). Word Clouds
-<img src="README_Pictures/screenshot7.jpg" alt="Sky Walking logo" height="50%" width="50%" align="right"/>
+<img src="README_Pictures/screenshot7.jpg" alt="Sky Walking logo" height="65%" width="65%" align="center"/>
 
 Word clouds corresponding with every spots are listed below. Each cloud demonstates the word that has the highest frequency in the comments.
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
 ## 3. Scrape
 
@@ -305,11 +227,11 @@ Data sources we use include the follows:
 - Airline data
 - Adelaide Metro Bus data
 
-<img src="README_Pictures/data_source.png" alt="Sky Walking logo" align="center"/>
+<img src="README_Pictures/data_source.png" alt="Sky Walking logo" align="center" height="80%" width="80%"/>
 
 ### 3.2. Analytics Process
 
-<img src="README_Pictures/analytic_process.png" alt="Sky Walking logo" align="center"/>
+<img src="README_Pictures/analytic_process.png" alt="Sky Walking logo" height="85%" width="85%" align="center"/>
 
 ### 3.3. Ctrip Comments Scrape
 

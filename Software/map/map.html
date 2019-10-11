@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5cde57168a88482ab67c83f7f0fcae09 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_5cde57168a88482ab67c83f7f0fcae09" ></div>
+        
+</body>
+<script>    
+    
+            var map_5cde57168a88482ab67c83f7f0fcae09 = L.map(
+                "map_5cde57168a88482ab67c83f7f0fcae09",
+                {
+                    center: [-34.92123, 138.599503],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e978d04a430a4f3fb9577b0dd5c8c179 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+            var marker_586538a70bfd40a39f1cf41366b9cb07 = L.marker(
+                [-34.94612, 138.533131],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_0603d4aa950343548b67a431f68b133d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76f57b64828b4003835a726aadd628ed = $(`<div id="html_76f57b64828b4003835a726aadd628ed" style="width: 100.0%; height: 100.0%;">Adelaide Airport</div>`)[0];
+            popup_0603d4aa950343548b67a431f68b133d.setContent(html_76f57b64828b4003835a726aadd628ed);
+        
+
+        marker_586538a70bfd40a39f1cf41366b9cb07.bindPopup(popup_0603d4aa950343548b67a431f68b133d)
+        ;
+
+        
+    
+    
+            var marker_6c0ee029a2814b35b9387c6318061b28 = L.marker(
+                [-34.93894564899995, 138.5349615980001],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_5ca6402f68f341d1a9158c39288e8c0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a3908e9003d04e13bd86184bca5d64d0 = $(`<div id="html_a3908e9003d04e13bd86184bca5d64d0" style="width: 100.0%; height: 100.0%;">Stop 10 Adelaide Airport</div>`)[0];
+            popup_5ca6402f68f341d1a9158c39288e8c0b.setContent(html_a3908e9003d04e13bd86184bca5d64d0);
+        
+
+        marker_6c0ee029a2814b35b9387c6318061b28.bindPopup(popup_5ca6402f68f341d1a9158c39288e8c0b)
+        ;
+
+        
+    
+    
+            var marker_b80af65d113643ae875d40afa933e285 = L.marker(
+                [-34.901058, 138.593754],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_1d9d49cc66ef4936ac783ca50c5c21cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6b8ad68fe90458db74abf07996b9966 = $(`<div id="html_b6b8ad68fe90458db74abf07996b9966" style="width: 100.0%; height: 100.0%;">O'Connell Inn</div>`)[0];
+            popup_1d9d49cc66ef4936ac783ca50c5c21cf.setContent(html_b6b8ad68fe90458db74abf07996b9966);
+        
+
+        marker_b80af65d113643ae875d40afa933e285.bindPopup(popup_1d9d49cc66ef4936ac783ca50c5c21cf)
+        ;
+
+        
+    
+    
+            var marker_6e7c00eae349447e983522f2d1bc5c2d = L.marker(
+                [-34.90293341699993, 138.59466684100005],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_441ac05b7d354317ab96ce0763366a82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6bacd792438a4274808651e3df727d03 = $(`<div id="html_6bacd792438a4274808651e3df727d03" style="width: 100.0%; height: 100.0%;">Stop 6 O'Connell St - West side</div>`)[0];
+            popup_441ac05b7d354317ab96ce0763366a82.setContent(html_6bacd792438a4274808651e3df727d03);
+        
+
+        marker_6e7c00eae349447e983522f2d1bc5c2d.bindPopup(popup_441ac05b7d354317ab96ce0763366a82)
+        ;
+
+        
+    
+    
+            var marker_affe41ca3dd14d0aa858b305599ad949 = L.marker(
+                [-34.91788, 138.58989],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_ab262db48d684a52bc084e92fbafdd0d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb2a58ccb9cc4c01b3b7b1c9ccfa2bf0 = $(`<div id="html_eb2a58ccb9cc4c01b3b7b1c9ccfa2bf0" style="width: 100.0%; height: 100.0%;">多伦斯河带状公园小径</div>`)[0];
+            popup_ab262db48d684a52bc084e92fbafdd0d.setContent(html_eb2a58ccb9cc4c01b3b7b1c9ccfa2bf0);
+        
+
+        marker_affe41ca3dd14d0aa858b305599ad949.bindPopup(popup_ab262db48d684a52bc084e92fbafdd0d)
+        ;
+
+        
+    
+    
+            var marker_9030250acc8b40ecac52d2101fc59f38 = L.marker(
+                [-34.91707717299994, 138.5929249630001],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_6c41401b012a4c3da2ac75a1963b742d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0522f41b0050422596e1c82f8b6eca79 = $(`<div id="html_0522f41b0050422596e1c82f8b6eca79" style="width: 100.0%; height: 100.0%;">Stop 2 Montefiore Rd - West side</div>`)[0];
+            popup_6c41401b012a4c3da2ac75a1963b742d.setContent(html_0522f41b0050422596e1c82f8b6eca79);
+        
+
+        marker_9030250acc8b40ecac52d2101fc59f38.bindPopup(popup_6c41401b012a4c3da2ac75a1963b742d)
+        ;
+
+        
+    
+    
+            var marker_efdbfd5899b5428da06a076caf5accfe = L.marker(
+                [-34.920465, 138.603903],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_d7edf5ff9dac4b90af006a5507e939f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12a596521f9b491995b5b2ff97a60059 = $(`<div id="html_12a596521f9b491995b5b2ff97a60059" style="width: 100.0%; height: 100.0%;">南澳大利亚艺术馆</div>`)[0];
+            popup_d7edf5ff9dac4b90af006a5507e939f7.setContent(html_12a596521f9b491995b5b2ff97a60059);
+        
+
+        marker_efdbfd5899b5428da06a076caf5accfe.bindPopup(popup_d7edf5ff9dac4b90af006a5507e939f7)
+        ;
+
+        
+    
+    
+            var marker_059ba0648efa46c0acf4ba8e04899863 = L.marker(
+                [-34.92116455699994, 138.60462840000002],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_cd35a34c27eb41cb9bfc9105c4587fcd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d98894a7c4f426fb81e27797a23ef79 = $(`<div id="html_0d98894a7c4f426fb81e27797a23ef79" style="width: 100.0%; height: 100.0%;">Stop G1 North Tce - North side</div>`)[0];
+            popup_cd35a34c27eb41cb9bfc9105c4587fcd.setContent(html_0d98894a7c4f426fb81e27797a23ef79);
+        
+
+        marker_059ba0648efa46c0acf4ba8e04899863.bindPopup(popup_cd35a34c27eb41cb9bfc9105c4587fcd)
+        ;
+
+        
+    
+    
+            var marker_0a282cae54ee4e94af727c4adea7ab66 = L.marker(
+                [-34.980603, 138.512874],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_582f24a0065440c9bffde692d918e6d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ac9840145b840bda26894b6be36d877 = $(`<div id="html_4ac9840145b840bda26894b6be36d877" style="width: 100.0%; height: 100.0%;">格雷尔海滩</div>`)[0];
+            popup_582f24a0065440c9bffde692d918e6d1.setContent(html_4ac9840145b840bda26894b6be36d877);
+        
+
+        marker_0a282cae54ee4e94af727c4adea7ab66.bindPopup(popup_582f24a0065440c9bffde692d918e6d1)
+        ;
+
+        
+    
+    
+            var marker_a6e97f62c52848be9de10fefa3638aa2 = L.marker(
+                [-34.98039052599995, 138.51201559800006],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_bb3b57339b0b4b0b886ac90b6f3cf8ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a78a05127da741b68310f786b5c5e0c6 = $(`<div id="html_a78a05127da741b68310f786b5c5e0c6" style="width: 100.0%; height: 100.0%;">Stop 17 Moseley Square</div>`)[0];
+            popup_bb3b57339b0b4b0b886ac90b6f3cf8ba.setContent(html_a78a05127da741b68310f786b5c5e0c6);
+        
+
+        marker_a6e97f62c52848be9de10fefa3638aa2.bindPopup(popup_bb3b57339b0b4b0b886ac90b6f3cf8ba)
+        ;
+
+        
+    
+    
+            var marker_7df65daa32ad41228d579ce247f592d4 = L.marker(
+                [-34.920594, 138.60611],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_986e0a9eb4d44f6f87eb613ba53bb081 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f135cb5aaf69404da3876c99685d0800 = $(`<div id="html_f135cb5aaf69404da3876c99685d0800" style="width: 100.0%; height: 100.0%;">阿德莱德大学</div>`)[0];
+            popup_986e0a9eb4d44f6f87eb613ba53bb081.setContent(html_f135cb5aaf69404da3876c99685d0800);
+        
+
+        marker_7df65daa32ad41228d579ce247f592d4.bindPopup(popup_986e0a9eb4d44f6f87eb613ba53bb081)
+        ;
+
+        
+    
+    
+            var marker_cb8e594ed39a4a0facb6fc1fcd98097f = L.marker(
+                [-34.92118057399995, 138.60617441400007],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_a1103e503c704331a6b666b8b8ddba14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e940ea31e4d4a788bc3c64b758cd428 = $(`<div id="html_6e940ea31e4d4a788bc3c64b758cd428" style="width: 100.0%; height: 100.0%;">Stop Tram University</div>`)[0];
+            popup_a1103e503c704331a6b666b8b8ddba14.setContent(html_6e940ea31e4d4a788bc3c64b758cd428);
+        
+
+        marker_cb8e594ed39a4a0facb6fc1fcd98097f.bindPopup(popup_a1103e503c704331a6b666b8b8ddba14)
+        ;
+
+        
+    
+    
+            var marker_32de3c7250dd4a8b969484aad5cfaa7f = L.marker(
+                [-34.901058, 138.593754],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_5e67e6e470464596b90f0710dcc12717 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5eae73e0f5a2441f9833a68032d13c60 = $(`<div id="html_5eae73e0f5a2441f9833a68032d13c60" style="width: 100.0%; height: 100.0%;">O'Connell Inn</div>`)[0];
+            popup_5e67e6e470464596b90f0710dcc12717.setContent(html_5eae73e0f5a2441f9833a68032d13c60);
+        
+
+        marker_32de3c7250dd4a8b969484aad5cfaa7f.bindPopup(popup_5e67e6e470464596b90f0710dcc12717)
+        ;
+
+        
+    
+    
+            var marker_f5bab5d2682345bb8a49e51e5f47e9bf = L.marker(
+                [-34.90293341699993, 138.59466684100005],
+                {}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+    
+        var popup_5ed6edea22b142499525689e62a4732c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83bd993c22bc4366aa6b7d5914828a39 = $(`<div id="html_83bd993c22bc4366aa6b7d5914828a39" style="width: 100.0%; height: 100.0%;">Stop 6 O'Connell St - West side</div>`)[0];
+            popup_5ed6edea22b142499525689e62a4732c.setContent(html_83bd993c22bc4366aa6b7d5914828a39);
+        
+
+        marker_f5bab5d2682345bb8a49e51e5f47e9bf.bindPopup(popup_5ed6edea22b142499525689e62a4732c)
+        ;
+
+        
+    
+    
+            var poly_line_1d14a32c12e648afa7e9dcfceffbbfc5 = L.polyline(
+                [[-34.94612, 138.533131], [-34.93894564899995, 138.5349615980001], [-34.901058, 138.593754], [-34.90293341699993, 138.59466684100005], [-34.91788, 138.58989], [-34.91707717299994, 138.5929249630001], [-34.920465, 138.603903], [-34.92116455699994, 138.60462840000002], [-34.980603, 138.512874], [-34.98039052599995, 138.51201559800006], [-34.920594, 138.60611], [-34.92118057399995, 138.60617441400007], [-34.901058, 138.593754], [-34.90293341699993, 138.59466684100005]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_5cde57168a88482ab67c83f7f0fcae09);
+        
+</script>
